@@ -17,7 +17,7 @@
 			<h2>Register</h2>
 		</div>	
 
-		<form method="post" action="register.php">
+		<form method="post" action="index.php">
 			<!-- display validation errors here-->
 			<?php include('errors.php'); ?>
 
