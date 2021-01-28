@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Virtual Lab</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: Century Gothic;
+		}
+		header{
+			background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("ADCET background.jpg");
+			height: 118vh;
+			background-size: cover;
+			background-position: center;
+            opacity: 155%;
+		}
+		.hac{
+			float: right;
+			list-style-type: none;
+			margin-top: 35px;
+           
+			
+		}
+		 .hac li{
+			display: inline-block;
+
+		}
+		 .hac li a{
+			text-decoration: none;
+			color: black;
+			padding: 5px 20px;
+			border: 1px solid transparent;
+			transition: 0.6s ease;
+			font-size: 37px;
+			text-shadow: 9px 9px 12px white;
+
+		}
+		.hac li a:hover{
+			background-color: #FFA500;
+			color: #000;	
+			text-transform: uppercase;
+		}
+		.logo img{
+			float:left;
+			width: 155px;
+			height: auto;
+             position: absolute;
+             top: 8px;
+             left: 16px;
+		}
+		.main{
+			max-width: 1200px;
+			margin: auto;
+            left margin-left: 10px;
+		}
+		
+		.title{
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%,-80%);
+		}
+		.title h1{
+			color: yellow;
+			font-size: 70px;
+            text-shadow: 0 0 6px black;
+            text-shadow: 2px 2px 5px red;
+		}
+		.button{
+			position: absolute;
+			top: 107%;
+			left: 50%;
+			transform: translate(-55%,-50%);
+           width: 350px;
+           padding: 10px;
+           border: 7px solid green;
+           margin: 0; 
+            text-align: center;
+
+		}
+		.btn{
+			text-decoration:none;
+			transition: 0.2s ease;
+			font-size: 20px;
+            background-color: white;
+			color: #000;
+			text-transform: uppercase;
+            display: inline-block;
+            text-shadow: 3px 3px 6px red; 
+            
+            
+		}
+		.btn:hover{
+			background-color: white;
+			color: #000;
+			text-transform: uppercase;
+            
+		}
+
+		.images{
+			position: absolute;
+			top: 66%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+
+		}
+	</style>
+</head>
+<body>
+		<header>
+			<div class="main">
+				<div class="logo">
+					<img src="DLogo.png">
+                    
+				</div>
+				<ul class="hac">
+					<li class="home"><h3><b><a href="index.html">Home</a></b></h3></li>
+					<li class="about"><h3><b><a href="About.html" target="_self">About</a></b></h3></li>
+                    <li class="contact"><h3><b><a href="http://localhost/Register/indexC.php" target="_self">Contact</a></b></h3></li>
+				</ul>
+			</div>
+			<div class="title">
+			<marquee scrollamount="25"><h1>Welcome To ADCET System Software Virtual Lab</h1></marquee>
+			</div>
+			<div class="button">
+				<a href="SSLab.html" target="_blank" class="btn"><h2><b>System Software Lab</b></h2></a>
+			</div>
+
+			<div class="images">
+				<marquee direction="right"; scrollamount="15"><img src="slide1.jpg" style="width: 330px;height: 330px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<img src="slide2.jpg" style="width: 330px;height: 330px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<img src="slide3.jpg" style="width: 330px;height: 330px"></marquee>                                          
+			</div>
+		</header>
+</body>
+</html>
