@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment-7</title>
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Century Gothic;
+			background-color: #DAF7A6;
+		}
+	</style>
+
+</head>
+<body>
+		<center>
+			<h1 style="font-size: 40px; color: red; text-shadow: 3px 3px 5px purple;">Experiment-7</h1>
+		</center><br>
+
+		<center>
+			<h2 style="font-size: 28px; color: darkgreen"><b><u>Aim:</u> Design of linker</b> <h2><br>	
+		</center>
+		
+		<h2 style="font-size: 22px; color: darkblue"><b>&nbsp &nbsp &nbsp <u>Theory:</u></b></h2><br>
+
+		<h3 style="font-size: 20px">&nbsp &nbsp &nbsp Design of linker</h3>
+
+		<b style="font-size: 20px">&nbsp &nbsp &nbsp 1.Algorithm for relocating:-</b><br>
+		<p style="font-size: 20px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp It is the process of modifying the addresses used in address sensitive instructions of a program such that the program can execute correctly from the designated area of memory.</p><br>
+
+		<b style="font-size: 20px">&nbsp &nbsp &nbsp 2.Algorithm for linking:-</b><br>
+		<p style="font-size: 20px"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp It is the process of binding an external reference to the correct link time address.<br><br>
+			&nbsp &nbsp &nbsp Consider following program:-<br>	
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp START 500 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp -<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ENTRY TOTAL &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp -<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp EXTERN MAX, ALPHA &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp -<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp READ 	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 500)	+09 0 540<br>
+		&nbsp &nbsp &nbsp LOOP 		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 501) <br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp . . .<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp MOVER AREG, ALPHA &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 518) +04 1 000<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp BC ANY, MAX<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp . . .   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp . . .<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp BC LT, LOOP  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 538) +06 1 501<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp STOP  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 539) +00 0 000<br>
+		&nbsp &nbsp &nbsp A 	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp DS  1  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp540)<br>
+		&nbsp &nbsp &nbsp TOTAL	&nbsp &nbsp &nbsp &nbsp &nbsp DS	1 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp541)<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp END<br><br></p>
+
+			<b style="font-size: 20px">&nbsp &nbsp &nbsp *Algorithm (Program Relocation)   
+			</b><br><br>
+			<p style="font-size: 20px">&nbsp &nbsp &nbsp 1. program_linked_origin = <link origin> from linker command <br>
+			&nbsp &nbsp &nbsp 2. For each object module<br>
+			   &nbsp &nbsp &nbsp &nbsp (a)t_origin := translated origin of object module;<br>
+				&nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp OM_size:= size of the object module; 	<br>
+			   &nbsp &nbsp &nbsp &nbsp (b)relocation_factor:= program _linked_origin – t_origin;<br>
+			   &nbsp &nbsp &nbsp &nbsp (c)Read m/c language program in work_area.<br>
+			   &nbsp &nbsp &nbsp &nbsp (d) Read RELOCTAB of object module.<br>
+			  &nbsp &nbsp &nbsp &nbsp  (e) For each entry in RELOCTAB <br>
+			       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp (i)Translated_addr := addr in RELOCTAB entry; <br>
+			       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp (ii) Address_in_work_area := address of work_area +  translated_address – t_origin; <br>
+			       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp (iii)Add relocation_factor to the operand address in the word  with address address_in_work_area.<br>
+			   &nbsp &nbsp &nbsp &nbsp (f) Program_linked_origin := program_linked_origin + OM size;<br><br></p>
+			   
+			   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+			   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+			   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+			   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+			   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+			   <video src="Relocation and linking in Linkers.mp4" width="700" controls loop>Relocation and linking in Linkers</video>
+			   <br> <br>
+			 
+			  <b style="font-size: 20px">&nbsp &nbsp &nbsp *Linking Requirements</b><br><br>
+			   <ul style="font-size: 20px">
+			   		<li><b>Name table (NTAB) </b></li>
+			   		-each entry contains two fields
+			   		<ol>
+			   			<li><b>Symbol –</b> name of external reference or object module </li>
+			   			<li><b>Linked_address –</b></li>
+			   			-for public definition, this field contains linked address of the symbol.<br> 
+			   			-for an object module, it contains the linked origin of the object module. 
+			   		</ol>
+			   </ul>
+			   <b style="font-size: 20px">&nbsp &nbsp &nbsp *Algorithm (Program Linking)</b><br><br>
+			  <p style="font-size: 20px"> &nbsp &nbsp &nbsp 1.Program_linked_origin:= &lt link origin &gt from linker command<br>
+			  &nbsp &nbsp &nbsp 2.For each object module <br>
+			   	 &nbsp &nbsp &nbsp &nbsp (a) t_origin := translated origin of object module<br>
+			   	 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp OM_size := size of object module;<br>
+			   	 &nbsp &nbsp &nbsp &nbsp (b) relocation_factor:= program_linked_origin – t_origin;<br>
+			     &nbsp &nbsp &nbsp &nbsp (c) Read machine language program in work_area. <br>
+			     &nbsp &nbsp &nbsp &nbsp (d)Read LINKTAB of object module. <br>
+			     &nbsp &nbsp &nbsp &nbsp (e) For each LINKTAB entry with type=PD<br>
+			     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp name := symbol; <br>
+			     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp linked_address:= translated _address + relocation_factor;<br>
+			     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Enter(name, linked_address) in NTAB<br>
+			     &nbsp &nbsp &nbsp &nbsp (f) Enter (object module name,   program_linked_origin) in NTAB<br>
+		         &nbsp &nbsp &nbsp &nbsp (g) program_linked_origin:= program_linked_origin +OM_size;<br>
+		      &nbsp &nbsp &nbsp   3.For each object module <br>
+		         &nbsp &nbsp &nbsp &nbsp (a) t_origin := translated origin of object module; program_linked_origin:= load_address from NTAB <br>
+      		     &nbsp &nbsp &nbsp &nbsp (b) each LINKTAB entry with type=EXT<br>
+           		 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp (i) address_in-work_area:= address_of_work_area + program_linked_origin - +translated adrress –t+origin; <br>
+            	 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp	(ii) Search symbol in NTAB and copy its linked address. Add the linked address to the operand address in the word with the address address_in_work_area.</p><br>
+</body>
+</html>

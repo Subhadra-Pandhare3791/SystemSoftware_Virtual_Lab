@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment-2</title>
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Century Gothic;
+			background-color: #DAF7A6;
+		}
+	</style>
+</head>
+<body>
+		<center>
+			<h1 style="font-size: 40px; color: green; text-shadow: 3px 3px 5px red;">Experiment-2</h1>
+		</center><br>
+		<center>
+			<h3 style="font-size: 28px; color: blue"><b><u>Aim:</u></b>  &nbsp Fundamentals of Language Processing</h3>
+		</center>
+		
+		<br>
+		 <h3 style="font-size: 28px; color: purple"><b>&nbsp &nbsp &nbsp<u>Theory:</u></b></h3>
+		<p>
+			<h4 style="font-size: 21px">&nbsp &nbsp &nbsp 1. Fundamentals of Language Processing</h4>
+			<ol style="font-size:19px">
+				<li>Analysis of Source Program</li>
+				<li>Synthesis of Target Program</li>
+			</ol> 
+		<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp <b style="font-size:19px">I) Analysis of Source Program</b>
+			<br><br><p style="font-size: 19px">
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>* Specification of source language:</b>
+			<br><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Consists of three components:
+			<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 1. Lexical rules which governs the formation of valid lexical units in the source language.<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 2. Syntax rules which govern the formation of valid statements in the source language.<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 3.  Semantic rules which associate the meaning with valid statements of the language.<br><br></p>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b style="font-size: 19px">* Example:</b>
+			<br><br><p style="font-size:19px">   
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp We can say analysis of source statement consists of lexical, syntax and semantic analysis.<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Example:- percent_profit = (profit * 100) / cost_price;
+			<br><br>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<video src="Language Processing System in Compiler Design _ Lecture 2.mp4" width="700" controls loop>success</video> <br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>a) Lexical analysis-</b><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp identifies following things:<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 1)=, * and / as operators<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 2)100 as constant<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 3)Remaining strings as identifiers.
+			<br><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>b) Syntax analysis-</b><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 1)Identifies the statement as the assignment statement.<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp	2)LHS and RHS is checked<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp	3)a+b=c; will it work?<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp	4)Its assignment only statement<br>
+			<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>b) Semantic analysis-</b><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 1)Determines the meaning of the statement.<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 2)Assigns:<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp (profit x 100)/cost_price to percent_profit RHS assigned to LHS
+			<br><br></p>
+			&nbsp &nbsp &nbsp &nbsp &nbsp <b style="font-size: 19px">II) Synthesis of Target Program</b>
+			<br><p style="font-size: 19px">
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Synthesis Phase: This consists of two main activities-
+			<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 1)Creation of Data Structures in the target program( Memory Allocation)<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 2)Generation of target code(code generation)
+			<br><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp A Language Processor generates following assembly language statements for: 
+			<br><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>percent_profit = (profit * 100) / cost_price</b>
+			<br><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img src="percent_profit.png"><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Where,<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp MOVER move a value from a memory location to CPU register<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp MOVEM move a value from a CPU register to memory location<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  DW reserves one or more words in memory<br>
+			<br></p>
+			
+		</p>
+</body>
+</html>

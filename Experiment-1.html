@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment-1</title>
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Century Gothic;
+			background-color: #DAF7A6;
+		}
+	</style>
+</head>
+<body>
+	
+			<center>
+				<h1 style="font-size: 40px; color: red; text-shadow: 3px 3px 5px purple;"><b>Experiment-1</b></h1>
+			</center><br>
+			<center><h3 style="font-size: 28px; color: darkgreen"><b><u> Aim:</u></b>  Introduction of Language Processor, Language Processing Activities</h3></center>
+			<br>
+			<h3 style="font-size: 28px; color: darkblue"><b>&nbsp &nbsp &nbsp<u>Theory:</u></b></h3>
+
+			<p>
+			<h4 style="font-size: 22px">&nbsp &nbsp &nbsp &nbsp &nbsp 1.Introduction of Language Processor</h4>
+			
+			<b style="font-size: 20px">&nbsp &nbsp &nbsp *Semantic Gap:</b><p style="font-size: 19px">
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Language processing activities arise due to the difference between the manner in which a software designer describes the ideas concerning the behavior of software and the manner in which these ideas are implemented in a software system.
+			The designer expresses the ideas in terms related to the application domain & to implement those ideas, their description has to be interpreted in terms related to the execution domain of a computer system
+			We use the term semantics to represent the rules of meaning of a domain and the term semantic gap  to represent the difference between the semantics of two domains as shown in the following figure:</p>
+			<br>
+			<br>
+			<center>
+			<img src="Semantic Gap.png" style="width:350px;height:250px;">
+			</center>
+			<br>
+
+			<b style="font-size: 22px">&nbsp &nbsp &nbsp *Consequences of semantic gap:</b>
+			<ol style="font-size: 19px">
+				<li>Large development times
+				<li>Large development efforts
+				<li>Poor quality of software
+			</ol>
+			<p style="font-size: 19px">These issues are tackled by software engineering through the use of methodologies and programming languages(PLs). 
+			The software engineering steps aimed at the use of a PL can be grouped into:</p>
+			<ol style="font-size: 19px">
+				<li>Specification, design and coding steps
+				<li>PL implementation steps
+
+			</ol>
+			<br>
+
+			<b style="font-style:22px">*PL Domain:</b><p style="font-size: 19px">
+				Software implementation using a PL domain introduces a new domain, the PL domain.
+				The semantic gap between the application domain and execution domain is bridged by software engineering steps.
+				The first step bridges the gap between Application domain and PL domain, while the second step bridges the gap between the PL domain and execution domain. </p>
+				<center>
+					<img src="PL Domain.jpg" style="width:350px;height:250px;">
+				</center>
+			<br>
+
+			<b style="font-size: 22px">Specification Gap:</b>
+				<p style="font-size: 19px">We refer the gap between application domain and PL domain as the specification-and-design gap or simply the specification gap.</p>
+			<br>
+
+			<b style="font-size: 22px">Execution Gap:</b><p style="font-size: 19px">
+				The execution gap is bridged by the designer of the programming language processor namely a translator or an interpreter.</p>
+			<br>
+			<br>
+			<b style="font-size: 22px">Advantages of implementing PL Domain::</b>
+			<ol style="font-size: 19px">
+				<li>The gap to be bridged by the software designer in now between the application domain and PL domain rather than between application domain and execution domain.
+				This reduces the severity of the consequences of the semantic gap mentioned earlier.
+				<li>Apart from the bridging gap between PL and execution domains the language processor provides capability to detect and indicate errors in the input.
+				This improves the quality of software.
+
+			</ol>
+
+			<h4 style="font-size: 22px">2. Language Processing Activities</h4>
+            <p style="font-size: 19px">We group fundamental language processing activities into two categories as:</p>
+		
+			<ol style="font-size: 19px">
+				<li>Program Generation activities </li>
+				<li>Program Execution activities</li>
+			</ol>
+			<br>
+			<b style="font-size: 22px">a)Program Generation activities</b>
+			<ul style="font-size: 19px">
+				<li>It aims at automatic generation of program. Figure shows the Program Generation activities.</li>
+				<li>The program generator is a software system which accepts the specification of a program to be generated and generates the program in the target programming language.</li>
+			</ul>
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img src="Program Generator.png" style="width:350px;height:250px;">
+				<br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Fig. Program generator
+				<br><br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<img src="Program generation.png" style="width:450px;height:250px;">
+			<br><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Fig. Program generation (a)Schematic (b)the program generator domain<br><br>
+			<b style="font-size: 22px">*Advantages in reduction in specification gap:</b>
+			<ul style="font-size: 19px">
+				<li>Increase the reliability of the generated program, as generated domain is close to the application domain.</li>
+				<li>It is easy for the designer to write the specification of the program to be generated.</li>
+			</ul>
+			<br>
+			<b style="font-size: 22px">* Example of Specification:</b>
+			<br>
+			<p style="font-size: 19px">
+			
+			Employee name &nbsp	: &nbsp	char : start(line=2,position=25)<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspend(line=2,position=80)
+			<br>
+			Married &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp: &nbsp char : start(line=10,position=25)<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspend(line=10,position=27)<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspvalue('yes','No') default('yes')
+			<br>
+			Age &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp: &nbsp numeric : start(line=12,position=25)<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspend(line=12,position=26)
+			<br>
+			Sex &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp: &nbsp char : start(line=12,position=35)<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspend(line=12,position=35)
+			<br><br></p>
+			<b>Output:</b><br>
+			<img src="Output of Screen Handling Programs.png">
+			<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspFig. Output of Screen Handling Programs
+			<br><br>
+			<b style="font-size: 22px">b)Program Execution activities</b>
+			<br><p style="font-size: 19px">
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp A program may be executed through translation or interpretation.</p>
+			<br><br>
+			&nbsp &nbsp <b style="font-size: 22px">I) Program Translation:</b><br><p style="font-size: 19px"> &nbsp &nbsp &nbsp &nbsp &nbsp The program translation model bridges the execution gap by translating a program written in programming language, called the source program in to equivalent program in the machine or assembly language of the computer system called the target program.</p>
+			<br><br>
+			<center>
+			<img src="Program translation model.png"></center>
+			<br><center style="font-size: 19px">Fig.Program Translation Model</center>
+			<br><br>
+			&nbsp &nbsp<b style="font-size: 19px">* Characteristics of Program Translation Model:</b><br>
+			<ul style="font-size: 19px">
+				<li>A program must be translated before it can be executed.</li>
+				<li>A m/c language program generated by translator is saved in file and loaded in main memory and executed whenever desired.( No need to translate every time)</li>
+				<li>Retranslation required after modification in source program.</li>
+			</ul>
+			&nbsp &nbsp <b style="font-size: 19px">* Arrangements of all language processors:</b><br><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<img src="Arrangements of all language processors.png">
+			<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspFig. A practical arrangement of all language processor 
+ 			<br><br>
+ 			&nbsp &nbsp <b style="font-size: 21px">II)Program Interpretation:</b>
+ 			<br>
+ 			<ul style="font-size: 19px">
+ 				<li>An interpreter executes a program without generating a target program.( line by line).</li>
+ 				<li>Achieved in 3 different steps:</li>
+ 				<ol>
+ 					<li>Fetch the instruction</li>
+ 					<li>Decode the instruction</li>
+ 					<li>Perform the operation</li>
+ 				</ol>
+ 			</ul>
+ 			<br>
+ 			&nbsp &nbsp &nbsp &nbsp <img src="Interpretation.png" style="width:450px;height:250px;"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<video src="WHAT ARE LANGUAGE PROCESSORS IN HINDI.mp4" width="700" controls loop>success</video>
+ 			<br>&nbsp &nbsp Schematic of (a)interpretation (b)execution of machine language program
+ 			<br><br>
+ 			&nbsp &nbsp <b style="font-size: 21px">* Characteristics of Program Interpretation Model</b>
+ 			<br>
+ 			<ul style="font-size: 19px">
+ 				<li>The source program is retained in the source form itself.( It is not converted in target program)</li>
+ 				<li>A statement is analyzed during its interpretation.</li>
+ 			</ul>
+		</p>
+
+ 
+			
+</body>
+</html>

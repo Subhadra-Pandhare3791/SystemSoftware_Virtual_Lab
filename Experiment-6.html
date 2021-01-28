@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment-6</title>
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Century Gothic;
+			background-color: #DAF7A6;
+		}
+	</style>
+	
+</head>
+<body>
+		<center>
+			<h1 style="font-size: 40px; color: purple; text-shadow: 3px 3px 5px red;">Experiment-6</h1>
+		</center><br>
+
+		<center>
+		    <h3 style="font-size: 28px; color: indigo"><b><u>Aim:</u>  Different schemes of loader.</b> <h3><br>
+		</center>
+		<h3 style="font-size: 22px; color: red"><b>&nbsp &nbsp &nbsp <u>Theory:</u></b></h3><br>
+
+		<p style="font-size: 21px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Input given to the loader is binary program which is an output from the linker. The user’s source program decks are converted to the object program decks (machine language) by assemblers and compilers.The loader is a program which accepts the object program decks, prepares these programs for execution, and initiates the execution.<br><br>
+		&nbsp &nbsp &nbsp  The loader performs following four functions:</p>
+		<ol style="font-size: 21px">
+			<li>Allocation: Allocate space in memory for the programs.</li>
+			<li>Linking: Resolve symbolic references between object decks.</li>
+			<li>Relocation: Adjust all address dependant locations to corresponding to the allocated space.</li>
+			<li>Loading: Physically place the machine instructions and data into memory.</li>
+		</ol>
+		<b style="font-size: 21px">&nbsp &nbsp &nbsp Loader Schemes:</b>
+		<p style="font-size: 21px">&nbsp &nbsp &nbsp There is variety of schemes for accomplishing the four functions of a loader.</p><br><br>
+
+		<b style="font-size: 21px">&nbsp &nbsp &nbsp  1. “ Compile-and-Go” Loaders:</b><br>
+		<p style="font-size: 21px">&nbsp &nbsp &nbsp &nbsp &nbsp One method of performing the loader function to have the assembler run in one part of memory & place the assembled machine instructions and data, as they are assembled, directly on to their assigned memory locations.Such a scheme is commonly called “compile-and-go” or “assemble-and-go”.<br><br>It is relatively easy to implement but having so many disadvantages:-</p>
+		<ul style="font-size: 21px">
+			<li>Memory wastage: As assembler occupies some memory there is simply wastage, as this amount of memory is unavailable to the object program.</li>
+			<li>Retranslation: It is necessary to retranslate (assemble) the user’s program deck for every execution.</li>
+			<li>Language: It is very difficult to handle source programs that are in different languages.</li>
+		</ul>
+		&nbsp &nbsp &nbsp <img src="Compile and Go loader.jpg" style="width:400px;height:300px;"><br><br>
+
+		<b style="font-size: 21px">&nbsp &nbsp &nbsp  2.General Loader Scheme:</b><br>
+		<p style="font-size: 21px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This scheme avoids the disadvantages of preceding “compile-and-go” scheme.As the size of the loader is assumed to be smaller than the assembler, more memory is available to the user.
+         Reassembly is not required to run the program at later date as it loads only the object deck.Finally the problem of source program in different language is automatically handled because the object deck/ object program is always in a single language i.e. machine code.</p>
+         <br><br>
+
+         &nbsp &nbsp &nbsp <img src="General Loader Scheme.jpg" style="width:400px;height:300px;"><br><br>
+         <b style="font-size: 21px">&nbsp &nbsp &nbsp  3.Absolute Loaders:</b><br>
+         <p style="font-size: 21px">&nbsp &nbsp &nbsp &nbsp &nbsp It is the simplest type of loader scheme which fits in to general model of previous type called as absolute loader.This scheme outputs the machine language translation of the source program and the data is punched on to the cards.This scheme makes more core available to the user since the assembler is not in the memory at load time.<br><br></p>
+        &nbsp &nbsp &nbsp  <img src="Absolute Loader.png" style="width:400px;height:300px;"><br>
+        &nbsp &nbsp &nbsp  Absolute loaders are simple to implement but do have several disadvantages:-
+         <ol style="font-size: 21px">
+         	<li>The programmer must specify the assembler the address in core where the program is to be loaded.</li>
+         	<li>If there are multiple subroutines, the programmer must remember the address of each and use that absolute address explicitly in his other subroutines to perform subroutine linkage.</li>
+         </ol><br>
+
+         <b style="font-size: 21px">&nbsp &nbsp &nbsp  4.Relocating Loader:</b><br>
+         <p style="font-size: 21px">&nbsp &nbsp &nbsp  To avoid the possible reassembling of all subroutines when a single subroutine is changed, and to perform the tasks of allocation and linking for the programmer, the general class of relocating loaders was introduced.<br>An example of relocating loader scheme is Binary symbolic subroutine (BSS).<br>BSS allows many procedure segment, yet only one data segment i.e. common segment.<br>The assembler assembles each procedure segment independently and passes on to the loader the text and information as to relocation and intersegment references.<br>The output of relocating assembler using a BSS scheme is the object program and also information about all other programs it references. Also there is information about relocation as locations in this program that need to be changed if it is to be loaded in to the core.</p><br>
+        
+         <b style="font-size: 21px">&nbsp &nbsp &nbsp  5.Direct Linking Loaders:</b><br>
+         <p style="font-size: 21px">&nbsp &nbsp &nbsp  It is the most popular loading scheme used today. It is a general relocatable loader.<br>
+          &nbsp &nbsp &nbsp It has the advantage of allowing the programmer multiple procedures and multiple data segments and giving him the complete freedom in referencing data or instructions contained in the other programs.<br>
+          This provides flexible intersegment referencing and accessing ability while at the same time allowing independent translations of programs.</p><br><br>
+
+          <b style="font-size: 21px">&nbsp &nbsp &nbsp  6.Dynamic Loading:</b><br>
+         <p style="font-size: 21px">&nbsp &nbsp &nbsp  In all above schemes we have seen that all of the subroutines needed are loaded in to the core at the same time. But if the total amount of core required by all these subroutines exceeds the amount available there is a trouble.<br>
+		  &nbsp &nbsp &nbsp This always happens with large programs or small computers. To solve this problem there are some hardware techniques such as paging and segmentation.</p><br>
+
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		  <video src="System programming-Loaders.mp4" width="700" controls loop>System programming-Loaders</video>
+		  <br> <br> <br> <br>
+
+		</body>
+</html>

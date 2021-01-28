@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment-10</title>
+
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Century Gothic;
+			background-color: #DAF7A6;
+		}
+	</style>
+
+</head>
+<body>
+		<center>
+			<h1 style="font-size: 40px; color: purple; text-shadow: 3px 3px 5px red;">Experiment-10</h1>
+		</center><br>
+
+		<center>
+			<h2 style="font-size: 28px;color: indigo"><b><u>Aim:</u> Designing issues in code generation.</b> <h2><br>
+		</center>
+		<h2 style="font-size: 28px;color: red"><b>&nbsp &nbsp &nbsp <u>Theory:</u></b></h2><br>	
+
+		<p style="font-size: 20px">
+		&nbsp &nbsp &nbsp In the code generation phase, various issues can arises:<br></p>
+		<ol style="font-size: 20px">
+			<li>Input to the code generator</li>
+			<li>Target program</li>
+			<li>Memory management</li>
+			<li>Instruction selection</li>
+			<li>Register allocation</li>
+			<li>Evaluation order</li>
+		</ol>
+		<h3 style="font-size: 20px">&nbsp &nbsp &nbsp 1. Input to the code generator:-</h3> 
+		<ul style="font-size: 20px">
+			<li>The input to the code generator contains the intermediate representation of the source program and the information of the symbol table. The source program is produced by the front end.</li>
+			<li>Intermediate representation has the several choices:</li>
+			<ul>
+				<li>Postfix notation</li>
+				<li>Syntax tree</li>
+				<li>Three address code</li>
+			</ul>
+			<li>We assume front end produces low-level intermediate representation i.e. values of names in it can directly manipulated by the machine instructions.</li>
+			<li>The code generation phase needs complete error-free intermediate code as an input requires.</li>
+		</ul><br>
+
+		<h3 style="font-size: 20px">&nbsp &nbsp &nbsp 2. Target program:-</h3><p style="font-size: 20px">
+		&nbsp &nbsp &nbsp The target program is the output of the code generator. The output can be:<br>
+		&nbsp &nbsp &nbsp a) Assembly language: It allows subprogram to be separately compiled.<br>
+		&nbsp &nbsp &nbsp b) Relocatable machine language: It makes the process of code generation easier.<br>
+		&nbsp &nbsp &nbsp c) Absolute machine language: It can be placed in a fixed location in memory and can be executed immediately.</p>
+
+		<h3 style="font-size: 20px">&nbsp &nbsp &nbsp 3. Memory management:-</h3>
+		<ul style="font-size: 20px">
+			<li>Nature of instruction set of the target machine should be complete and uniform.</li>
+			<li>When you consider the efficiency of target machine then the instruction speed and machine idioms are important factors.</li>
+			<li>The quality of the generated code can be determined by its speed and size.</li>
+		</ul>
+
+		<h3 style="font-size: 20px">&nbsp &nbsp &nbsp 5. Register allocation:-</h3><p style="font-size: 20px">
+		&nbsp &nbsp &nbsp Register can be accessed faster than memory. The instructions involving operands in register are shorter and faster than those involving in memory operand.<br><br>
+		&nbsp &nbsp &nbsp The following sub problems arise when we use registers:<br></p>
+		<b style="font-size: 20px">&nbsp &nbsp &nbsp Register allocation:</b>In register allocation, we select the set of variables that will reside in register.</h5><br>
+		<b style="font-size: 20px">&nbsp &nbsp &nbsp Register assignment:</b> In Register assignment, we pick the register that contains variable.</h5><br>
+		<p style="font-size: 20px">&nbsp &nbsp &nbsp Certain machine requires even-odd pairs of registers for some operands and result.</p>
+		<b style="font-size: 20px">&nbsp &nbsp &nbsp For example:</b><br>
+		<p style="font-size: 20px">&nbsp &nbsp &nbsp Consider the following division instruction of the form:-<br>
+		&nbsp &nbsp &nbsp D x, y  <br>
+		&nbsp &nbsp &nbsp Where,<br>
+		&nbsp &nbsp &nbsp x is the dividend even register in even/odd register pair<br>
+		&nbsp &nbsp &nbsp y is the divisor<br></p>
+		<b style="font-size: 20px">&nbsp &nbsp &nbsp Even register</b> is used to hold the reminder.<br>
+		<b style="font-size: 20px">&nbsp &nbsp &nbsp Odd register</b> is used to hold the quotient.<br><br>
+
+		<h3 style="font-size: 20px">&nbsp &nbsp &nbsp 6. Evaluation order:-</h3>
+		<p style="font-size: 20px">&nbsp &nbsp &nbsp The efficiency of the target code can be affected by the order in which the computations are performed. Some computation orders need fewer registers to hold results of intermediate than others.</p><br>
+
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		&nbsp &nbsp &nbsp &nbsp 
+		<video src="Issues in the design of a code generator.mp4" width="700" controls loop>Issues in the design of a code generator</video>
+		<br> <br> <br> <br> <br>
+	 
+
+
+
+	</body>
+</html>

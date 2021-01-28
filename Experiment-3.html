@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment-3</title>
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Century Gothic;
+			background-color: #DAF7A6;
+
+		}
+		
+		table,th,td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding-right: 100px;
+}
+
+th, td {
+  padding: 5px;
+ 
+}
+	</style>
+</head>
+<body>
+		<center>
+			<h1 style="font-size: 40px; color: red; text-shadow: 3px 3px 5px purple;">Experiment-3</h1>
+		</center><br>
+		<center>
+		<h3 style="font-size: 28px; color: darkgreen"><b><u>Aim:</u></b>  &nbspImplementation of the Pass-I of the assembler to generate SYMTAB from assembly language program.</h3><br></center>
+
+		<h3 style="font-size: 28px; color: darkblue"><b>&nbsp &nbsp &nbsp <u>Theory:</u></b></h3><br><p style="font-size: 18px">
+
+		&nbsp &nbsp &nbsp Tasks performed by the Pass-I are:-<br></p>
+		 <ol style="font-size: 19px">
+		 	<li>Separate the symbol table, mnemonic table, and operand fields.</li>
+		 	<li>Build the symbol table.</li>
+		 	<li>Perform LC Processing.</li>
+		 	<li>Construct Intermediate Representation (IR).</li>
+		 </ol><br><br><p style="font-size: 19px">
+		&nbsp &nbsp &nbsp Pass-I performs the analysis of the Source Program and synthesize the IR.<br><br>
+		&nbsp &nbsp &nbsp Pass-I uses the following data structures:-</p>
+		 <ol style="font-size: 19px">
+		 	<li>OPTAB= A table of mnemonic opcodes and related information.</li>
+		 	<li>SYMTAB= Table of Symbols used in the program.</li>
+		 	<li>LITTAB= A table of Literals used in the program.</li>
+		 	<li>POOLTAB= Table containing the information about the LITTAB.</li>
+		 </ol><br>
+		 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     
+		 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		 &nbsp &nbsp &nbsp &nbsp
+		 <video src="Symbol Table with Example.mp4" width="700" controls loop>success</video>
+          <br> <br>
+		 &nbsp &nbsp &nbsp <b style="font-size: 19px">SYMTAB:</b>
+		 <ul style="font-size: 19px">
+		 	<li>An entry in the SYMTAB contains the fields symbol, address & length.</li>
+		 	<li>While processing an assembly statement if the symbol is found, the symbol & address contained in location counter LC is copied in to a new entry of SYMTAB.</li>
+		 	<li>In the start of the assembly program an address is specified, this address is assigned to LC to keep track of each and every instruction.</li>
+		 </ul>
+		 
+		 <center><img src="Exp-3(asembly).jpg"></center>
+
+		<p style="font-size: 20px">&nbsp &nbsp &nbsp Symbol table :- </p>  
+		<center>
+		 <table>
+			<tr>
+				<th>Symbol</th>
+				<th>Address</th>
+				<th>Length</th>
+			</tr>
+
+			<tr>
+				<td>LOOP</td>
+				<td>202</td>
+				<td>1</td>
+			</tr>
+
+			<tr>
+				<td>NEXT</td>
+				<td>214</td>
+				<td>1</td>
+			</tr>
+
+			<tr>
+				<td>LAST</td>
+				<td>216</td>
+				<td>1</td>
+			</tr>
+
+			<tr>
+				<td>A</td>
+				<td>217</td>
+				<td>1</td>
+			</tr>
+
+			<tr>
+				<td>BACK</td>
+				<td>202</td>
+				<td>1</td>
+			</tr>
+
+			<tr>
+				<td>B</td>
+				<td>218</td>
+				<td>1</td>
+			</tr>
+		</table>
+		</center><br><br><br>
+</body>
+</html>

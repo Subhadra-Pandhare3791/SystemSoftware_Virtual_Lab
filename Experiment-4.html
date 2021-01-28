@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment-4</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Century Gothic;
+			background-color: #DAF7A6;
+		}
+	</style>
+</head>
+<body>
+		<center>
+			<h1 style="font-size: 40px; color: green; text-shadow: 3px 3px 5px red;">Experiment-4</h1>
+		</center><br>
+		<center><h3 style="font-size: 28px;color: blue"><b><u>Aim:</u></b> Implementation of the Pass-I of the assembler to generate LITTAB and POOLTAB from assembly language program.</center>
+
+		<h3><br><h3 style="font-size: 28px; color: purple">&nbsp &nbsp &nbsp <b><u>Theory:</u></b></h3><br>
+
+	   <p style="font-size: 19px">&nbsp &nbsp &nbsp Tasks performed by the Pass-I are:-</p>
+		<ol style="font-size: 19px">
+			<li>Separate the symbol table, mnemonic table, and operand fields.</li>
+			<li>Build the symbol table.</li>
+			<li>Perform LC Processing.</li>
+			<li>Construct Intermediate Representation (IR).</li>
+		</ol>
+		 <p style="font-size: 19px">&nbsp &nbsp &nbsp Pass-I performs the analysis of the Source Program and synthesize the IR.</p><br>
+		 <p style="font-size: 19px">&nbsp &nbsp &nbsp Pass-I uses the following data structures:-</p>
+		 <ol style="font-size: 19px">
+			<li>OPTAB= A table of mnemonic opcodes and related information.</li>
+			<li>SYMTAB= Table of Symbols used in the program.</li>
+			<li>LITTAB= A table of Literals used in the program.</li>
+			<li>POOLTAB= Table containing the information about the LITTAB.</li>
+		</ol>
+		&nbsp &nbsp &nbsp<b style="font-size: 19px">LITTAB and POOLTAB</b><br>
+		&nbsp &nbsp &nbsp <ul style="font-size: 19px">
+			<li>Literals are entered in the LITTAB in the sequential manner, along with two fields first one is literal and second is address of that literal.</li>
+			<li>An entry in the POOLTAB indicates the number of pools of literals present in the input assembly language program.</li>
+			<li>It contains only one field i.e. literal number. Literal number indicates which entry in LITTAB contains the first literal of the pool.</li>
+			<li>In the assembly language program given below, there are two pools, the first one is before the LTORG statement and second is after LTORG statement to END statement.</li>
+			<li>Pool one is having two literals =’5’ & =’2’ and again pool two is having two literals as =’9’ and =’1’. Hence LITTAB will have total four entries.</li>
+			<li>Here both pools contains 2 literals, and hence POOLTAB will have the entries as 0,2 and 4.</li>
+		</ul><br>
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		  &nbsp &nbsp &nbsp &nbsp 
+		  <video src="Symbol table and literal table and pool table.mp4" width="700" controls loop>Symbol table and literal table and pool table</video>
+		  <br> <br>
+		&nbsp &nbsp &nbsp <b style="font-size: 19px">Input: An assembly Language Program:-</b><br><p style="font-size: 19px">
+		 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp START &nbsp &nbsp &nbsp &nbsp501<br><br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp MOVER &nbsp &nbsp AREG, ='5'<br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ADD &nbsp &nbsp &nbsp &nbsp &nbsp AREG, ='2'<br><br>>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp LTORG<br><br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp MOVER &nbsp &nbsp AREG, ='9'<br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ADD &nbsp &nbsp &nbsp &nbsp &nbsp AREG, ='1'<br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp END</p><br><br>
+		&nbsp &nbsp &nbsp <b style="font-size: 19px">Output: LITTAB and POOLTAB:-</b><br><br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img src="Output of LITTAB and POOLTAB.png">
+</body>
+</html>
